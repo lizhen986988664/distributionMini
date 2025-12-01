@@ -1,0 +1,194 @@
+/* 
+ * 洗衣液小程序全局样式文件
+ * 自定义主题变量和样式
+ */
+
+/* 自定义主题变量 */
+:root {
+  /* 品牌色 */
+  --td-brand-color: #ff6b35;
+  --td-brand-color-1: #fff8f5;
+  --td-brand-color-2: #ffe0d1;
+  --td-brand-color-3: #ffc7a3;
+  --td-brand-color-4: #ffad76;
+  --td-brand-color-5: #ff9349;
+  --td-brand-color-6: #ff7a32;
+  --td-brand-color-7: #ff6b35;
+  --td-brand-color-8: #e55a2b;
+  --td-brand-color-9: #cc4921;
+  --td-brand-color-10: #a03d1a;
+
+  /* 功能色 */
+  --td-success-color: #52c41a;
+  --td-warning-color: #faad14;
+  --td-error-color: #f5222d;
+  --td-info-color: #1890ff;
+
+  /* 文字色 */
+  --td-text-color-primary: #333333;
+  --td-text-color-secondary: #666666;
+  --td-text-color-placeholder: #999999;
+  --td-text-color-disabled: #cccccc;
+
+  /* 背景色 */
+  --td-bg-color-page: #f8f8f8;
+  --td-bg-color-container: #ffffff;
+  --td-bg-color-component: #fafafa;
+
+  /* 边框色 */
+  --td-border-color: #e8e8e8;
+  --td-border-color-light: #f0f0f0;
+
+  /* 圆角 */
+  --td-radius-default: 8rpx;
+  --td-radius-small: 4rpx;
+  --td-radius-large: 12rpx;
+  --td-radius-extra-large: 16rpx;
+
+  /* 阴影 */
+  --td-shadow-1: 0 2rpx 4rpx rgba(0, 0, 0, 0.06);
+  --td-shadow-2: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+  --td-shadow-3: 0 8rpx 24rpx rgba(0, 0, 0, 0.12);
+}
+
+/* 全局重置样式 */
+page {
+  background-color: var(--td-bg-color-page);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--td-text-color-primary);
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+/* 通用组件样式覆盖 */
+.t-button {
+  border-radius: var(--td-radius-default);
+}
+
+.t-button--primary {
+  background-color: var(--td-brand-color);
+  border-color: var(--td-brand-color);
+}
+
+.t-button--primary:active {
+  background-color: var(--td-brand-color-8);
+  border-color: var(--td-brand-color-8);
+}
+
+.t-button--default {
+  border-color: var(--td-border-color);
+}
+
+.t-button--default:active {
+  background-color: var(--td-bg-color-component);
+}
+
+.t-input {
+  border-radius: var(--td-radius-default);
+}
+
+.t-input:focus {
+  border-color: var(--td-brand-color);
+}
+
+.t-card {
+  border-radius: var(--td-radius-large);
+  box-shadow: var(--td-shadow-1);
+}
+
+/* 自定义工具类 */
+.brand-gradient {
+  background: linear-gradient(135deg, var(--td-brand-color-6), var(--td-brand-color-5));
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--td-brand-color-6), var(--td-brand-color-5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-brand {
+  color: var(--td-brand-color);
+}
+
+.text-success {
+  color: var(--td-success-color);
+}
+
+.text-warning {
+  color: var(--td-warning-color);
+}
+
+.text-error {
+  color: var(--td-error-color);
+}
+
+.bg-brand {
+  background-color: var(--td-brand-color);
+}
+
+.bg-success {
+  background-color: var(--td-success-color);
+}
+
+.bg-warning {
+  background-color: var(--td-warning-color);
+}
+
+.bg-error {
+  background-color: var(--td-error-color);
+}
+
+/* 动画类 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-up-enter-from {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-up-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* 安全区域适配 */
+.safe-area-inset-bottom {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-inset-top {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}

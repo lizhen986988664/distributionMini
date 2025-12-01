@@ -1,0 +1,49 @@
+{
+  "name": "洗衣液小程序",
+  "appid": "wxacc9ab7adc8ec5e9",
+  "description": "海星模式洗衣液销售小程序",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "networkTimeout": {
+    "request": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  },
+  "sassImplementationName": "node-sass",
+  "mp-weixin": {
+    "appid": "",
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "enhance": true,
+      "postcss": true,
+      "preloadBackgroundData": false,
+      "minified": true,
+      "newFeature": false,
+      "coverView": true,
+      "nodeModules": false,
+      "autoAudits": false,
+      "showShadowRootInWxmlPanel": true,
+      "scopeDataCheck": false,
+      "uglifyFileName": false,
+      "checkInvalidKey": true,
+      "checkSiteMap": true,
+      "uploadWithSourceMap": true,
+      "compileHotReLoad": false
+    },
+    "usingComponents": true,
+    "permission": {
+      "scope.userLocation": {
+        "desc": "您的位置信息将用于推荐附近的服务"
+      }
+    },
+    "requiredPrivateInfos": ["getLocation"]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于推荐附近的服务"
+    }
+  }
+}

@@ -1,0 +1,374 @@
+@charset "UTF-8";
+/* 
+ * 洗衣液小程序全局样式文件
+ * 自定义主题变量和样式
+ */
+/* 自定义主题变量 */
+.data-v-032f11f4:root {
+  /* 品牌色 */
+  --td-brand-color: #ff6b35;
+  --td-brand-color-1: #fff8f5;
+  --td-brand-color-2: #ffe0d1;
+  --td-brand-color-3: #ffc7a3;
+  --td-brand-color-4: #ffad76;
+  --td-brand-color-5: #ff9349;
+  --td-brand-color-6: #ff7a32;
+  --td-brand-color-7: #ff6b35;
+  --td-brand-color-8: #e55a2b;
+  --td-brand-color-9: #cc4921;
+  --td-brand-color-10: #a03d1a;
+  /* 功能色 */
+  --td-success-color: #52c41a;
+  --td-warning-color: #faad14;
+  --td-error-color: #f5222d;
+  --td-info-color: #1890ff;
+  /* 文字色 */
+  --td-text-color-primary: #333333;
+  --td-text-color-secondary: #666666;
+  --td-text-color-placeholder: #999999;
+  --td-text-color-disabled: #cccccc;
+  /* 背景色 */
+  --td-bg-color-page: #f8f8f8;
+  --td-bg-color-container: #ffffff;
+  --td-bg-color-component: #fafafa;
+  /* 边框色 */
+  --td-border-color: #e8e8e8;
+  --td-border-color-light: #f0f0f0;
+  /* 圆角 */
+  --td-radius-default: 8rpx;
+  --td-radius-small: 4rpx;
+  --td-radius-large: 12rpx;
+  --td-radius-extra-large: 16rpx;
+  /* 阴影 */
+  --td-shadow-1: 0 2rpx 4rpx rgba(0, 0, 0, 0.06);
+  --td-shadow-2: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+  --td-shadow-3: 0 8rpx 24rpx rgba(0, 0, 0, 0.12);
+}
+/* 全局重置样式 */
+page.data-v-032f11f4 {
+  background-color: var(--td-bg-color-page);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--td-text-color-primary);
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+/* 通用组件样式覆盖 */
+.t-button.data-v-032f11f4 {
+  border-radius: var(--td-radius-default);
+}
+.t-button--primary.data-v-032f11f4 {
+  background-color: var(--td-brand-color);
+  border-color: var(--td-brand-color);
+}
+.t-button--primary.data-v-032f11f4:active {
+  background-color: var(--td-brand-color-8);
+  border-color: var(--td-brand-color-8);
+}
+.t-button--default.data-v-032f11f4 {
+  border-color: var(--td-border-color);
+}
+.t-button--default.data-v-032f11f4:active {
+  background-color: var(--td-bg-color-component);
+}
+.t-input.data-v-032f11f4 {
+  border-radius: var(--td-radius-default);
+}
+.t-input.data-v-032f11f4:focus {
+  border-color: var(--td-brand-color);
+}
+.t-card.data-v-032f11f4 {
+  border-radius: var(--td-radius-large);
+  box-shadow: var(--td-shadow-1);
+}
+/* 自定义工具类 */
+.brand-gradient.data-v-032f11f4 {
+  background: linear-gradient(135deg, var(--td-brand-color-6), var(--td-brand-color-5));
+}
+.text-gradient.data-v-032f11f4 {
+  background: linear-gradient(135deg, var(--td-brand-color-6), var(--td-brand-color-5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.flex-center.data-v-032f11f4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between.data-v-032f11f4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text-center.data-v-032f11f4 {
+  text-align: center;
+}
+.text-brand.data-v-032f11f4 {
+  color: var(--td-brand-color);
+}
+.text-success.data-v-032f11f4 {
+  color: var(--td-success-color);
+}
+.text-warning.data-v-032f11f4 {
+  color: var(--td-warning-color);
+}
+.text-error.data-v-032f11f4 {
+  color: var(--td-error-color);
+}
+.bg-brand.data-v-032f11f4 {
+  background-color: var(--td-brand-color);
+}
+.bg-success.data-v-032f11f4 {
+  background-color: var(--td-success-color);
+}
+.bg-warning.data-v-032f11f4 {
+  background-color: var(--td-warning-color);
+}
+.bg-error.data-v-032f11f4 {
+  background-color: var(--td-error-color);
+}
+/* 动画类 */
+.fade-enter-active.data-v-032f11f4,
+.fade-leave-active.data-v-032f11f4 {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from.data-v-032f11f4,
+.fade-leave-to.data-v-032f11f4 {
+  opacity: 0;
+}
+.slide-up-enter-active.data-v-032f11f4,
+.slide-up-leave-active.data-v-032f11f4 {
+  transition: all 0.3s ease;
+}
+.slide-up-enter-from.data-v-032f11f4 {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+}
+.slide-up-leave-to.data-v-032f11f4 {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+}
+/* 安全区域适配 */
+.safe-area-inset-bottom.data-v-032f11f4 {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.safe-area-inset-top.data-v-032f11f4 {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+.coupon-page.data-v-032f11f4 {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  padding-bottom: 40rpx;
+}
+.stats-section.data-v-032f11f4 {
+  padding: 30rpx 20rpx;
+}
+.stats-section .stats-card.data-v-032f11f4 {
+  background: linear-gradient(135deg, #ff6b35, #ff8c42);
+  border-radius: 16rpx;
+  padding: 40rpx 30rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4rpx 12rpx rgba(255, 107, 53, 0.3);
+}
+.stats-section .stats-card .stats-item.data-v-032f11f4 {
+  text-align: center;
+  flex: 1;
+}
+.stats-section .stats-card .stats-item .stats-number.data-v-032f11f4 {
+  display: block;
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8rpx;
+}
+.stats-section .stats-card .stats-item .stats-label.data-v-032f11f4 {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.8);
+}
+.stats-section .stats-card .stats-divider.data-v-032f11f4 {
+  width: 1rpx;
+  height: 60rpx;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.tab-section.data-v-032f11f4 {
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+}
+.tab-section .tab-list.data-v-032f11f4 {
+  display: flex;
+}
+.tab-section .tab-list .tab-item.data-v-032f11f4 {
+  flex: 1;
+  text-align: center;
+  padding: 30rpx 0;
+  font-size: 28rpx;
+  color: #666;
+  position: relative;
+}
+.tab-section .tab-list .tab-item.active.data-v-032f11f4 {
+  color: #ff6b35;
+  font-weight: bold;
+}
+.tab-section .tab-list .tab-item.active.data-v-032f11f4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 60rpx;
+  height: 4rpx;
+  background-color: #ff6b35;
+  border-radius: 2rpx;
+}
+.tab-section .tab-list .tab-item .tab-badge.data-v-032f11f4 {
+  position: absolute;
+  top: 20rpx;
+  right: 50%;
+  -webkit-transform: translateX(20rpx);
+          transform: translateX(20rpx);
+  min-width: 32rpx;
+  height: 32rpx;
+  background-color: #ff6b35;
+  color: #fff;
+  border-radius: 16rpx;
+  font-size: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8rpx;
+}
+.coupon-list.data-v-032f11f4 {
+  margin: 20rpx 20rpx 0;
+}
+.coupon-list .coupon-item.data-v-032f11f4 {
+  background-color: #fff;
+  border-radius: 12rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  position: relative;
+}
+.coupon-list .coupon-item.used.data-v-032f11f4, .coupon-list .coupon-item.expired.data-v-032f11f4 {
+  opacity: 0.6;
+}
+.coupon-list .coupon-item.used .coupon-content .coupon-left .coupon-amount.data-v-032f11f4, .coupon-list .coupon-item.expired .coupon-content .coupon-left .coupon-amount.data-v-032f11f4 {
+  color: #999;
+}
+.coupon-list .coupon-item.used .coupon-content .coupon-right.data-v-032f11f4, .coupon-list .coupon-item.expired .coupon-content .coupon-right.data-v-032f11f4 {
+  color: #999;
+}
+.coupon-list .coupon-item .coupon-content.data-v-032f11f4 {
+  display: flex;
+  padding: 30rpx;
+}
+.coupon-list .coupon-item .coupon-content .coupon-left.data-v-032f11f4 {
+  flex-shrink: 0;
+  text-align: center;
+  padding-right: 30rpx;
+}
+.coupon-list .coupon-item .coupon-content .coupon-left .coupon-amount.data-v-032f11f4 {
+  margin-bottom: 10rpx;
+}
+.coupon-list .coupon-item .coupon-content .coupon-left .coupon-amount .currency.data-v-032f11f4 {
+  font-size: 24rpx;
+  color: #ff6b35;
+}
+.coupon-list .coupon-item .coupon-content .coupon-left .coupon-amount .amount.data-v-032f11f4 {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #ff6b35;
+}
+.coupon-list .coupon-item .coupon-content .coupon-left .coupon-condition.data-v-032f11f4 {
+  font-size: 22rpx;
+  color: #666;
+}
+.coupon-list .coupon-item .coupon-content .coupon-divider.data-v-032f11f4 {
+  width: 2rpx;
+  background-color: #f0f0f0;
+  margin: 0 30rpx;
+}
+.coupon-list .coupon-item .coupon-content .coupon-right.data-v-032f11f4 {
+  flex: 1;
+}
+.coupon-list .coupon-item .coupon-content .coupon-right .coupon-name.data-v-032f11f4 {
+  display: block;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+.coupon-list .coupon-item .coupon-content .coupon-right .coupon-desc.data-v-032f11f4 {
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 8rpx;
+}
+.coupon-list .coupon-item .coupon-content .coupon-right .coupon-time.data-v-032f11f4 {
+  font-size: 22rpx;
+  color: #999;
+}
+.coupon-list .coupon-item .coupon-actions.data-v-032f11f4 {
+  position: absolute;
+  right: 30rpx;
+  bottom: 30rpx;
+}
+.coupon-list .coupon-item .used-mark.data-v-032f11f4,
+.coupon-list .coupon-item .expired-mark.data-v-032f11f4 {
+  position: absolute;
+  right: 60rpx;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+  font-size: 24rpx;
+  color: #999;
+  opacity: 0.8;
+}
+.receive-section.data-v-032f11f4 {
+  margin: 40rpx 20rpx 0;
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 30rpx;
+}
+.receive-section .section-title.data-v-032f11f4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.receive-section .section-title .title-text.data-v-032f11f4 {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+.receive-section .section-title .more-text.data-v-032f11f4 {
+  font-size: 26rpx;
+  color: #666;
+}
+.receive-section .receive-list .coupon-item.data-v-032f11f4 {
+  background-color: #fafafa;
+}
+.receive-section .receive-list .coupon-item .coupon-content .coupon-left .coupon-amount .currency.data-v-032f11f4,
+.receive-section .receive-list .coupon-item .coupon-content .coupon-left .coupon-amount .amount.data-v-032f11f4 {
+  color: #ff6b35;
+}
+.empty-state.data-v-032f11f4 {
+  text-align: center;
+  padding: 100rpx 0;
+}
+.empty-state .empty-image.data-v-032f11f4 {
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 30rpx;
+}
+.empty-state .empty-text.data-v-032f11f4 {
+  font-size: 28rpx;
+  color: #999;
+}
+

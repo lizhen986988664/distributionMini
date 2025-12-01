@@ -1,0 +1,379 @@
+@charset "UTF-8";
+/* 
+ * 洗衣液小程序全局样式文件
+ * 自定义主题变量和样式
+ */
+/* 自定义主题变量 */
+.data-v-724df718:root {
+  /* 品牌色 */
+  --td-brand-color: #ff6b35;
+  --td-brand-color-1: #fff8f5;
+  --td-brand-color-2: #ffe0d1;
+  --td-brand-color-3: #ffc7a3;
+  --td-brand-color-4: #ffad76;
+  --td-brand-color-5: #ff9349;
+  --td-brand-color-6: #ff7a32;
+  --td-brand-color-7: #ff6b35;
+  --td-brand-color-8: #e55a2b;
+  --td-brand-color-9: #cc4921;
+  --td-brand-color-10: #a03d1a;
+  /* 功能色 */
+  --td-success-color: #52c41a;
+  --td-warning-color: #faad14;
+  --td-error-color: #f5222d;
+  --td-info-color: #1890ff;
+  /* 文字色 */
+  --td-text-color-primary: #333333;
+  --td-text-color-secondary: #666666;
+  --td-text-color-placeholder: #999999;
+  --td-text-color-disabled: #cccccc;
+  /* 背景色 */
+  --td-bg-color-page: #f8f8f8;
+  --td-bg-color-container: #ffffff;
+  --td-bg-color-component: #fafafa;
+  /* 边框色 */
+  --td-border-color: #e8e8e8;
+  --td-border-color-light: #f0f0f0;
+  /* 圆角 */
+  --td-radius-default: 8rpx;
+  --td-radius-small: 4rpx;
+  --td-radius-large: 12rpx;
+  --td-radius-extra-large: 16rpx;
+  /* 阴影 */
+  --td-shadow-1: 0 2rpx 4rpx rgba(0, 0, 0, 0.06);
+  --td-shadow-2: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+  --td-shadow-3: 0 8rpx 24rpx rgba(0, 0, 0, 0.12);
+}
+/* 全局重置样式 */
+page.data-v-724df718 {
+  background-color: var(--td-bg-color-page);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--td-text-color-primary);
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+/* 通用组件样式覆盖 */
+.t-button.data-v-724df718 {
+  border-radius: var(--td-radius-default);
+}
+.t-button--primary.data-v-724df718 {
+  background-color: var(--td-brand-color);
+  border-color: var(--td-brand-color);
+}
+.t-button--primary.data-v-724df718:active {
+  background-color: var(--td-brand-color-8);
+  border-color: var(--td-brand-color-8);
+}
+.t-button--default.data-v-724df718 {
+  border-color: var(--td-border-color);
+}
+.t-button--default.data-v-724df718:active {
+  background-color: var(--td-bg-color-component);
+}
+.t-input.data-v-724df718 {
+  border-radius: var(--td-radius-default);
+}
+.t-input.data-v-724df718:focus {
+  border-color: var(--td-brand-color);
+}
+.t-card.data-v-724df718 {
+  border-radius: var(--td-radius-large);
+  box-shadow: var(--td-shadow-1);
+}
+/* 自定义工具类 */
+.brand-gradient.data-v-724df718 {
+  background: linear-gradient(135deg, var(--td-brand-color-6), var(--td-brand-color-5));
+}
+.text-gradient.data-v-724df718 {
+  background: linear-gradient(135deg, var(--td-brand-color-6), var(--td-brand-color-5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.flex-center.data-v-724df718 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between.data-v-724df718 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text-center.data-v-724df718 {
+  text-align: center;
+}
+.text-brand.data-v-724df718 {
+  color: var(--td-brand-color);
+}
+.text-success.data-v-724df718 {
+  color: var(--td-success-color);
+}
+.text-warning.data-v-724df718 {
+  color: var(--td-warning-color);
+}
+.text-error.data-v-724df718 {
+  color: var(--td-error-color);
+}
+.bg-brand.data-v-724df718 {
+  background-color: var(--td-brand-color);
+}
+.bg-success.data-v-724df718 {
+  background-color: var(--td-success-color);
+}
+.bg-warning.data-v-724df718 {
+  background-color: var(--td-warning-color);
+}
+.bg-error.data-v-724df718 {
+  background-color: var(--td-error-color);
+}
+/* 动画类 */
+.fade-enter-active.data-v-724df718,
+.fade-leave-active.data-v-724df718 {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from.data-v-724df718,
+.fade-leave-to.data-v-724df718 {
+  opacity: 0;
+}
+.slide-up-enter-active.data-v-724df718,
+.slide-up-leave-active.data-v-724df718 {
+  transition: all 0.3s ease;
+}
+.slide-up-enter-from.data-v-724df718 {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+}
+.slide-up-leave-to.data-v-724df718 {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+}
+/* 安全区域适配 */
+.safe-area-inset-bottom.data-v-724df718 {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.safe-area-inset-top.data-v-724df718 {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+.trial-page.data-v-724df718 {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  padding-bottom: 120rpx;
+}
+.trial-banner.data-v-724df718 {
+  position: relative;
+  height: 400rpx;
+}
+.trial-banner .banner-image.data-v-724df718 {
+  width: 100%;
+  height: 100%;
+}
+.trial-banner .banner-content.data-v-724df718 {
+  position: absolute;
+  bottom: 60rpx;
+  left: 40rpx;
+}
+.trial-banner .banner-content .banner-title.data-v-724df718 {
+  display: block;
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10rpx;
+}
+.trial-banner .banner-content .banner-subtitle.data-v-724df718 {
+  font-size: 28rpx;
+  color: rgba(255, 255, 255, 0.9);
+}
+.rules-section.data-v-724df718, .products-section.data-v-724df718, .form-section.data-v-724df718, .records-section.data-v-724df718 {
+  margin: 20rpx 20rpx 0;
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 30rpx;
+}
+.rules-section .section-title.data-v-724df718, .products-section .section-title.data-v-724df718, .form-section .section-title.data-v-724df718, .records-section .section-title.data-v-724df718 {
+  margin-bottom: 30rpx;
+}
+.rules-section .section-title .title-text.data-v-724df718, .products-section .section-title .title-text.data-v-724df718, .form-section .section-title .title-text.data-v-724df718, .records-section .section-title .title-text.data-v-724df718 {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+.rules-content .rule-item.data-v-724df718 {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20rpx;
+}
+.rules-content .rule-item.data-v-724df718:last-child {
+  margin-bottom: 0;
+}
+.rules-content .rule-item .rule-number.data-v-724df718 {
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #ff6b35;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+.rules-content .rule-item .rule-text.data-v-724df718 {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.5;
+  flex: 1;
+}
+.product-list .product-card.data-v-724df718 {
+  display: flex;
+  padding: 20rpx;
+  border-radius: 8rpx;
+  background-color: #fafafa;
+  margin-bottom: 20rpx;
+}
+.product-list .product-card.data-v-724df718:last-child {
+  margin-bottom: 0;
+}
+.product-list .product-card .product-image.data-v-724df718 {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+.product-list .product-card .product-info.data-v-724df718 {
+  flex: 1;
+}
+.product-list .product-card .product-info .product-name.data-v-724df718 {
+  display: block;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+.product-list .product-card .product-info .product-desc.data-v-724df718 {
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+}
+.product-list .product-card .product-info .product-spec.data-v-724df718 {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 15rpx;
+}
+.product-list .product-card .product-info .product-spec .spec-text.data-v-724df718 {
+  font-size: 26rpx;
+  color: #ff6b35;
+  font-weight: bold;
+}
+.product-list .product-card .product-info .product-spec .spec-label.data-v-724df718 {
+  font-size: 22rpx;
+  color: #999;
+  margin-left: 6rpx;
+}
+.form-content .form-item.data-v-724df718 {
+  margin-bottom: 30rpx;
+}
+.form-content .form-item.data-v-724df718:last-child {
+  margin-bottom: 0;
+}
+.form-content .form-item .form-label.data-v-724df718 {
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 15rpx;
+}
+.record-list .record-item.data-v-724df718 {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  border-radius: 8rpx;
+  background-color: #fafafa;
+  margin-bottom: 20rpx;
+}
+.record-list .record-item.data-v-724df718:last-child {
+  margin-bottom: 0;
+}
+.record-list .record-item .record-image.data-v-724df718 {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+.record-list .record-item .record-info.data-v-724df718 {
+  flex: 1;
+}
+.record-list .record-item .record-info .record-name.data-v-724df718 {
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+.record-list .record-item .record-info .record-time.data-v-724df718 {
+  display: block;
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 8rpx;
+}
+.record-list .record-item .record-info .record-status.data-v-724df718 {
+  display: inline-block;
+  padding: 4rpx 12rpx;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+}
+.record-list .record-item .record-info .record-status.pending.data-v-724df718 {
+  background-color: #e6f7ff;
+  color: #1890ff;
+}
+.record-list .record-item .record-info .record-status.approved.data-v-724df718 {
+  background-color: #f6ffed;
+  color: #52c41a;
+}
+.record-list .record-item .record-info .record-status.shipped.data-v-724df718 {
+  background-color: #fff7e6;
+  color: #faad14;
+}
+.record-list .record-item .record-info .record-status.completed.data-v-724df718 {
+  background-color: #f6f6f6;
+  color: #666;
+}
+.record-list .record-item .record-info .record-status.rejected.data-v-724df718 {
+  background-color: #fff2f0;
+  color: #ff4d4f;
+}
+.bottom-bar.data-v-724df718 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  z-index: 100;
+}
+.bottom-bar .price-info.data-v-724df718 {
+  display: flex;
+  align-items: baseline;
+}
+.bottom-bar .price-info .price-label.data-v-724df718 {
+  font-size: 26rpx;
+  color: #666;
+}
+.bottom-bar .price-info .price.data-v-724df718 {
+  font-size: 32rpx;
+  color: #ff6b35;
+  font-weight: bold;
+}
+.bottom-bar .button.data-v-724df718 {
+  width: 240rpx;
+}
+

@@ -1,0 +1,22 @@
+{
+  "name": "laundry-liquid-uniapp",
+  "version": "1.0.0",
+  "description": "洗衣液小程序 - 海星模式",
+  "main": "main.js",
+  "scripts": {
+    "dev:mp-weixin": "uni build --watch --target mp-weixin",
+    "build:mp-weixin": "uni build --target mp-weixin",
+    "dev:h5": "uni serve",
+    "build:h5": "uni build"
+  },
+  "dependencies": {
+    "vue": "^2.6.14",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^3.4.8",
+    "cross-env": "^7.0.3",
+    "sass": "^1.69.7",
+    "sass-loader": "^13.3.3"
+  }
+}
